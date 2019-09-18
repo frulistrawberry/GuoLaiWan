@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/GuoLaiWan.iml" filepath="$PROJECT_DIR$/GuoLaiWan.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SmallVideoLib/SmallVideoLib.iml" filepath="$PROJECT_DIR$/SmallVideoLib/SmallVideoLib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/base/base.iml" filepath="$PROJECT_DIR$/base/base.iml" />
+      <module fileurl="file://$PROJECT_DIR$/guolaiwan/guolaiwan.iml" filepath="$PROJECT_DIR$/guolaiwan/guolaiwan.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jbq/jbq.iml" filepath="$PROJECT_DIR$/jbq/jbq.iml" />
+      <module fileurl="file://$PROJECT_DIR$/live/live.iml" filepath="$PROJECT_DIR$/live/live.iml" />
+      <module fileurl="file://$PROJECT_DIR$/vitamio/vitamio.iml" filepath="$PROJECT_DIR$/vitamio/vitamio.iml" />
+    </modules>
+  </component>
+</project>
