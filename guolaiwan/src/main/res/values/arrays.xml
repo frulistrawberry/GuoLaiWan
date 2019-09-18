@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--女生动画-->
+    <array name="chinese_woman_in">
+        <item>@mipmap/woman_1</item>
+        <item>@mipmap/woman_2</item>
+        <item>@mipmap/woman_3</item>
+        <item>@mipmap/woman_4</item>
+        <item>@mipmap/woman_5</item>
+        <item>@mipmap/woman_6</item>
+        <item>@mipmap/woman_7</item>
+        <item>@mipmap/woman_8</item>
+        <item>@mipmap/woman_9</item>
+        <item>@mipmap/woman_10</item>
+        <item>@mipmap/woman_11</item>
+        <item>@mipmap/woman_12</item>
+        <item>@mipmap/woman_13</item>
+        <item>@mipmap/woman_14</item>
+        <item>@mipmap/woman_15</item>
+        <item>@mipmap/woman_16</item>
+        <item>@mipmap/woman_17</item>
+        <item>@mipmap/woman_18</item>
+        <item>@mipmap/woman_19</item>
+        <item>@mipmap/woman_20</item>
+        <item>@mipmap/woman_21</item>
+    </array>
+
+    <array name="chinese_woman_speak">
+        <item>@mipmap/woman_22</item>
+        <item>@mipmap/woman_23</item>
+        <item>@mipmap/woman_24</item>
+        <item>@mipmap/woman_25</item>
+        <item>@mipmap/woman_26</item>
+        <item>@mipmap/woman_27</item>
+        <item>@mipmap/woman_28</item>
+    </array>
+
+    <array name="chinese_woman_out">
+        <item>@mipmap/woman_29</item>
+        <item>@mipmap/woman_30</item>
+        <item>@mipmap/woman_31</item>
+        <item>@mipmap/woman_32</item>
+        <item>@mipmap/woman_33</item>
+    </array>
+
+    <!--男生动画-->
+    <array name="chinese_man_in">
+        <item>@mipmap/man_1</item>
+        <item>@mipmap/man_2</item>
+        <item>@mipmap/man_3</item>
+        <item>@mipmap/man_4</item>
+        <item>@mipmap/man_5</item>
+        <item>@mipmap/man_6</item>
+        <item>@mipmap/man_7</item>
+        <item>@mipmap/man_8</item>
+        <item>@mipmap/man_9</item>
+        <item>@mipmap/man_10</item>
+        <item>@mipmap/man_11</item>
+        <item>@mipmap/man_12</item>
+        <item>@mipmap/man_13</item>
+        <item>@mipmap/man_14</item>
+        <item>@mipmap/man_15</item>
+        <item>@mipmap/man_16</item>
+        <item>@mipmap/man_17</item>
+        <item>@mipmap/man_18</item>
+        <item>@mipmap/man_19</item>
+        <item>@mipmap/man_20</item>
+    </array>
+
+    <array name="chinese_man_speak">
+        <item>@mipmap/man_21</item>
+        <item>@mipmap/man_22</item>
+        <item>@mipmap/man_23</item>
+        <item>@mipmap/man_24</item>
+        <item>@mipmap/man_25</item>
+    </array>
+
+    <array name="chinese_man_out">
+        <item>@mipmap/man_26</item>
+        <item>@mipmap/man_27</item>
+        <item>@mipmap/man_28</item>
+        <item>@mipmap/man_29</item>
+        <item>@mipmap/man_30</item>
+        <item>@mipmap/man_31</item>
+        <item>@mipmap/man_33</item>
+        <item>@mipmap/man_34</item>
+    </array>
+
+</resources>

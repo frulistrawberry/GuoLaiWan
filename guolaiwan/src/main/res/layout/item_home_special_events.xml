@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/iv_img"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_120"
+        fresco:failureImage="@mipmap/ic_image_load"
+        fresco:placeholderImage="@mipmap/ic_image_load"
+        fresco:actualImageResource="@mipmap/ic_image_load"
+        fresco:actualImageScaleType="centerCrop"
+        fresco:placeholderImageScaleType="centerCrop"
+        fresco:failureImageScaleType="centerCrop"/>
+
+    <LinearLayout
+        android:id="@+id/guolaiwan_toutiao_ll"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40"
+        android:paddingLeft="@dimen/dp_15"
+        android:paddingRight="@dimen/dp_15"
+        android:background="#fff">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="6"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/guolaiwan_toutiao_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:text="过来玩头条"
+                android:textColor="#FF0000"
+                android:textSize="@dimen/sp_18"
+                android:textStyle="bold"
+                android:gravity="center_vertical"/>
+
+            <TextView
+                android:id="@+id/guolaiwan_toutiao_title_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:textSize="@dimen/sp_13"
+                android:text="清东陵徒步大会会热报名中"
+                android:gravity="center_vertical"
+                android:textColor="#000"
+                android:paddingLeft="@dimen/dp_5"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/guolaiwan_toutiao_watch_more_tv"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="更多"
+            android:textColor="#000"
+            android:textSize="@dimen/sp_14"
+            android:gravity="center"/>
+    </LinearLayout>
+</LinearLayout>

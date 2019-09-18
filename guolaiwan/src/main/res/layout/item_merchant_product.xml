@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/layout_parent"
+    android:background="#f4f4f4">
+    <FrameLayout
+        android:id="@+id/layout_img"
+        android:layout_width="match_parent"
+        android:layout_height="130dp">
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/iv_img"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_130"
+            fresco:failureImage="@mipmap/ic_image_load"
+            fresco:placeholderImage="@mipmap/ic_image_load"
+            fresco:actualImageResource="@mipmap/ic_image_load"
+            fresco:actualImageScaleType="centerCrop"
+            fresco:placeholderImageScaleType="centerCrop"
+            fresco:failureImageScaleType="centerCrop"
+            fresco:roundTopLeft="true"
+            fresco:roundTopRight="true"
+            fresco:roundBottomLeft="false"
+            fresco:roundBottomRight="false"
+            fresco:roundedCornerRadius="@dimen/dp_5"/>
+        <ImageView
+            android:id="@+id/iv_check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/check_true"
+            android:layout_marginTop="@dimen/dp_10"
+            android:visibility="gone"
+            android:layout_marginRight="@dimen/dp_10"
+            android:layout_gravity="top|right"/>
+        <ImageView
+            android:id="@+id/iv_delete"
+            android:layout_width="@dimen/dp_20"
+            android:layout_height="@dimen/dp_20"
+            android:src="@drawable/delete"
+            android:layout_marginTop="@dimen/dp_10"
+            android:visibility="gone"
+            android:layout_marginRight="@dimen/dp_10"
+            android:layout_gravity="top|right"/>
+
+    </FrameLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/layout_img"
+        android:background="@drawable/bg_merchant_product"
+        android:paddingBottom="@dimen/dp_10"
+        android:paddingLeft="@dimen/dp_10"
+        android:paddingRight="@dimen/dp_10"
+        android:paddingTop="@dimen/dp_10">
+
+        <LinearLayout
+            android:id="@+id/ll_name"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lines="1"
+                android:ellipsize="end"
+                android:text=""
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/sp_14" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_below="@id/ll_name"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:textSize="@dimen/sp_12"
+                android:layout_alignParentRight="true"/>
+
+            <TextView
+                android:id="@+id/tv_original_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:textColor="#949494"
+                android:textSize="@dimen/sp_12"
+                android:layout_alignParentRight="true"
+                android:visibility="gone"/>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

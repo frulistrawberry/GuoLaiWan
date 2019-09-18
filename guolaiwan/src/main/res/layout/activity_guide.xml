@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!--语音插件-->
+    <com.guolaiwan.ui.widget.MyPleayer
+        android:id="@+id/videoplayer"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"/>
+
+    <!--地图容器-->
+    <com.amap.api.maps.TextureMapView
+        android:id="@+id/map_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!--图例-->
+    <LinearLayout
+        android:id="@+id/ll_legend"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="@dimen/dp_15"
+        android:layout_marginTop="@dimen/dp_20">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/circle_yellow"
+                android:background="@mipmap/legend_red_icon"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_toRightOf="@id/circle_yellow"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp_12"
+                android:text="未游览"
+                android:textColor="#000"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_5">
+            <ImageView
+                android:id="@+id/circle_red"
+                android:background="@mipmap/legend_yellow_icon"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/circle_red"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp_12"
+                android:text="已游览"
+                android:textColor="#000"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_5">
+            <ImageView
+                android:id="@+id/circle_green"
+                android:background="@mipmap/legend_purple_icon"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/circle_green"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp_12"
+                android:text="搜索结果"
+                android:textColor="#000"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <!--人物和文字或天气详情-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_230"
+        android:layout_marginLeft="@dimen/dp_5"
+        android:layout_marginTop="@dimen/dp_5">
+
+        <ImageView
+            android:id="@+id/iv_people"
+            android:layout_width="@dimen/dp_80"
+            android:layout_height="@dimen/dp_130"
+            android:layout_alignParentRight="true"/>
+
+        
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_230"
+            android:layout_marginRight="@dimen/dp_100"
+            android:background="@drawable/bg_guide_content">
+
+            <TextView
+                android:id="@+id/tv_weather"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="@dimen/dp_5"
+                android:lineSpacingExtra ="@dimen/dp_3"
+                android:textColor="@color/blue"
+                android:visibility="gone"/>
+        </ScrollView>
+
+
+        <RelativeLayout
+            android:id="@+id/rl_health_index"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_230"
+            android:layout_marginRight="@dimen/dp_100"
+            android:background="@drawable/bg_guide_content"
+            android:visibility="gone">
+            <TextView
+                android:id="@+id/tv_health"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dp_5"
+                android:lineSpacingExtra ="@dimen/dp_3"
+                android:textColor="@color/blue"/>
+        </RelativeLayout>
+
+
+        <ScrollView
+            android:id="@+id/sv_content"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_230"
+            android:layout_marginRight="@dimen/dp_100"
+            android:background="@drawable/bg_guide_content"
+            android:visibility="gone">
+            <TextView
+                android:id="@+id/tv_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="@dimen/dp_5"
+                android:lineSpacingExtra ="@dimen/dp_3"
+                android:textColor="@color/blue"/>
+        </ScrollView>
+    </RelativeLayout>
+
+
+    <!--语言选择对话框-->
+    <com.guolaiwan.ui.widget.SingleChoiceDialog
+        android:id="@+id/scd_voice"
+        android:layout_centerInParent="true"
+        android:layout_width="@dimen/dp_200"
+        android:layout_height="@dimen/dp_250"
+        android:visibility="gone">
+    </com.guolaiwan.ui.widget.SingleChoiceDialog>
+
+    <!--按钮-->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/dp_10"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true">
+
+        <ImageView
+            android:id="@+id/iv_voice"
+            android:layout_width="@dimen/dp_40"
+            android:layout_height="@dimen/dp_50"
+            android:background="@drawable/selector_guide_voice"/>
+
+        <ImageView
+            android:id="@+id/iv_remove_road"
+            android:layout_width="@dimen/dp_40"
+            android:layout_height="@dimen/dp_50"
+            android:layout_marginTop="@dimen/dp_5"
+            android:background="@drawable/selector_guide_remove_road"/>
+
+        <ImageView
+            android:id="@+id/iv_remove_record"
+            android:layout_width="@dimen/dp_40"
+            android:layout_height="@dimen/dp_50"
+            android:layout_marginTop="@dimen/dp_5"
+            android:background="@drawable/selector_guide_remove_record"/>
+
+        <ImageView
+            android:id="@+id/iv_health_index"
+            android:layout_width="@dimen/dp_40"
+            android:layout_height="@dimen/dp_50"
+            android:layout_marginTop="@dimen/dp_5"
+            android:background="@drawable/selector_guide_health_index"/>
+    </LinearLayout>
+
+    <!--播放器-->
+    <LinearLayout
+        android:id="@+id/ll_player_controller"
+        android:orientation="vertical"
+        android:layout_width="@dimen/dp_180"
+        android:layout_height="@dimen/dp_120"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/bg_guide_content"
+        android:layout_marginBottom="@dimen/dp_20"
+        android:visibility="gone">
+
+        <!--<LinearLayout-->
+            <!--android:orientation="vertical"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="0dp"-->
+            <!--android:layout_weight="2">-->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_60">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="前方即将到达"
+                android:paddingTop="@dimen/dp_5"
+                android:paddingLeft="@dimen/dp_5"
+                android:textColor="@color/blue"
+                android:textSize="@dimen/sp_10"/>
+
+            <TextView
+                android:id="@+id/tv_distination"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="@color/blue"
+                android:gravity="center"
+                android:textSize="@dimen/sp_12"/>
+
+        </LinearLayout>
+
+        <SeekBar
+            android:id="@+id/sb_progress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/dp_1"
+            android:maxHeight="@dimen/dp_1"
+            android:paddingStart="0dp"
+            android:paddingEnd="0dp"
+            android:thumb="@drawable/progrrss_bar_slider"
+            android:thumbOffset="0dp"
+            android:progressDrawable="@drawable/bg_seek_bar_drawable"
+            android:max="100"/>
+
+        <!--<LinearLayout-->
+            <!--android:orientation="horizontal"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="0dp"-->
+            <!--android:layout_weight="1">-->
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/rl_player_controller_text_detail"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2">
+                <TextView
+                    android:id="@+id/tv_player_controller_text_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="显示详情"
+                    android:layout_centerInParent="true"
+                    android:textSize="@dimen/sp_12"
+                    android:textColor="@color/blue"/>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/blue"/>
+
+            <RelativeLayout
+                android:id="@+id/rl_player_controller_bt"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+                <ImageView
+                    android:id="@+id/iv_player_controller_bt"
+                    android:layout_width="@dimen/dp_20"
+                    android:layout_height="@dimen/dp_20"
+                    android:src="@drawable/bt_guide_play"
+                    android:layout_centerInParent="true"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <!--语音加载-->
+    <RelativeLayout
+        android:id="@+id/rl_voice_loading"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transparent_voice_loading"
+        android:clickable="true">
+
+        <com.wang.avi.AVLoadingIndicatorView
+            android:id="@+id/loading_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            app:indicator="LineScale"
+            app:indicator_color="#F8F8FF" />
+
+        <TextView
+            android:layout_below="@id/loading_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="#F8F8FF"
+            android:text="正在加载语音..."/>
+    </RelativeLayout>
+
+</RelativeLayout>

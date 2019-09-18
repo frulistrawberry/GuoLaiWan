@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:padding="15dp"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/titleTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textColor="@color/text_black"
+        android:textStyle="bold"
+        />
+
+    <LinearLayout
+        android:id="@+id/userLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center_vertical"
+        >
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/iv_img"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            fresco:failureImage="@mipmap/ic_image_load"
+            fresco:placeholderImage="@mipmap/ic_image_load"
+            fresco:actualImageResource="@mipmap/ic_image_load"
+            fresco:actualImageScaleType="centerCrop"
+            fresco:placeholderImageScaleType="centerCrop"
+            fresco:failureImageScaleType="centerCrop"
+            fresco:roundAsCircle="true"/>
+        <TextView
+            android:id="@+id/tv_nick_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:maxLength="4"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:layout_marginLeft="5dp"
+            android:textColor="#517fae"
+            android:text="小皮匠"/>
+    </LinearLayout>
+
+</LinearLayout>

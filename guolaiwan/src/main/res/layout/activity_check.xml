@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cn.simonlee.xcodescanner.view.MaskRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <cn.simonlee.xcodescanner.view.AdjustTextureView
+        android:id="@+id/textureview"
+        android:layout_width="244dp"
+        android:layout_height="244dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="35dp"/>
+
+    <cn.simonlee.xcodescanner.view.ScannerFrameView
+        android:id="@+id/scannerframe"
+        android:layout_width="244dp"
+        android:layout_height="244dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="35dp"
+        app:frame_whRatio="1"
+        app:scan_cycle="1500" />
+
+    <TextView
+        android:id="@+id/input_button"
+        android:layout_width="220dp"
+        android:layout_height="39dp"
+        android:layout_below="@id/scannerframe"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="43dp"
+        android:background="@drawable/shap_btn_green"
+        android:gravity="center"
+        android:text="输入验单码"
+        android:textColor="@color/white" />
+
+</cn.simonlee.xcodescanner.view.MaskRelativeLayout>

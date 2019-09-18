@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/dp_15"
+    android:paddingRight="@dimen/dp_15"
+    android:background="@drawable/bg_professional_live_apply">
+
+    <LinearLayout
+        android:id="@+id/ll_camera_choice"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_camera_1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:layout_marginTop="@dimen/dp_20"
+            android:background="@drawable/selector_guide_introduce"
+            android:gravity="center"
+            android:visibility="gone"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_15"
+            android:text="机位一"/>
+
+        <TextView
+            android:id="@+id/tv_camera_2"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:layout_marginTop="@dimen/dp_20"
+            android:background="@drawable/selector_guide_introduce"
+            android:gravity="center"
+            android:visibility="gone"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_15"
+            android:text="机位二"/>
+
+        <TextView
+            android:id="@+id/tv_camera_3"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:layout_marginTop="@dimen/dp_20"
+            android:background="@drawable/selector_guide_introduce"
+            android:gravity="center"
+            android:visibility="gone"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_15"
+            android:text="机位三"/>
+
+
+        <TextView
+            android:id="@+id/tv_camera_4"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:layout_marginTop="@dimen/dp_20"
+            android:background="@drawable/selector_guide_introduce"
+            android:gravity="center"
+            android:visibility="gone"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_15"
+            android:text="机位四"/>
+
+        <TextView
+            android:id="@+id/tv_camera_5"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:layout_marginTop="@dimen/dp_20"
+            android:background="@drawable/selector_guide_introduce"
+            android:gravity="center"
+            android:visibility="gone"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_15"
+            android:text="机位五"/>
+
+        <TextView
+            android:id="@+id/tv_camera_6"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:layout_marginTop="@dimen/dp_20"
+            android:background="@drawable/selector_guide_introduce"
+            android:gravity="center"
+            android:visibility="gone"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_15"
+            android:text="机位六"/>
+
+        <TextView
+            android:id="@+id/tv_director"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:layout_marginTop="@dimen/dp_20"
+            android:background="@drawable/selector_guide_introduce"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_15"
+            android:text="导播"/>
+
+    </LinearLayout>
+
+</ScrollView>

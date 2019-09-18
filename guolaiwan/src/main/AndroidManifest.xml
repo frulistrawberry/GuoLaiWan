@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
+          package="app.guolaiwan.com.guolaiwan">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/> <!-- 用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/> <!-- 用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/> <!-- 用于申请调用A-GPS模块 -->
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS"/> <!-- 用于申请获取蓝牙信息进行室内定位 -->
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.FLASHLIGHT"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+
+    <uses-feature android:name="android.hardware.camera.autofocus"/>
+    <uses-feature
+        android:name="android.hardware.camera2"
+        android:required="true"/>
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true"/>
+
+    <application
+        android:name="com.guolaiwan.App"
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:supportsRtl="true"
+        android:testOnly="false"
+        android:theme="@style/AppTheme"
+        tools:replace="android:icon,android:theme">
+
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="0340ab472bbabb11e95a9aa6cb46467e"/>
+
+        <service android:name="com.amap.api.location.APSService"/>
+
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="5adae82d8f4a9d2d16000108">
+        </meta-data>
+
+        <activity
+            android:name=".wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop"/>
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+
+                <data android:scheme="tencent1106049570"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity
+            android:name="com.amap.api.navi.AmapRouteActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@android:style/Theme.NoTitleBar"/>
+        <activity
+            android:name="com.guolaiwan.ui.activity.MainActivity"
+            android:launchMode="singleTask"
+            android:noHistory="false"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data
+                    android:scheme="app"
+                    android:host="media_resource_system.guolaiwan"
+                    android:pathPrefix="/guideActivity"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.guolaiwan.ui.activity.CategoryListActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.guolaiwan.ui.activity.MerchantInfoActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.guolaiwan.ui.activity.ProductInfoActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.guolaiwan.ui.activity.LoginActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.guolaiwan.ui.activity.RegisterActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.guolaiwan.ui.activity.ResetPasswordActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.guolaiwan.ui.activity.ShopCartActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.guolaiwan.ui.activity.PayActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.guolaiwan.ui.activity.AddAddressActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.guolaiwan.ui.activity.MyAddressActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.guolaiwan.ui.activity.MyCollectActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.guolaiwan.ui.activity.CustomPayActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.guolaiwan.ui.activity.LiveActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.guolaiwan.ui.activity.OrderListActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.guolaiwan.ui.activity.BindPhoneActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.guolaiwan.ui.activity.OrderInfoActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.guolaiwan.ui.activity.EditUserInfoActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.guolaiwan.ui.activity.SettingActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.guolaiwan.ui.activity.MerchantOrderInfoActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.guolaiwan.ui.activity.CheckActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.guolaiwan.ui.activity.ChooseProductActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.guolaiwan.ui.activity.PlayerActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.guolaiwan.ui.activity.SearchActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.guolaiwan.ui.activity.GuideActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.guolaiwan.ui.activity.GuideSearchActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.guolaiwan.ui.activity.ImageBrowserActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.guolaiwan.ui.activity.PublishPicActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.guolaiwan.ui.activity.PhotoPickerActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.guolaiwan.ui.activity.VideoActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.guolaiwan.ui.activity.BuyNowActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.guolaiwan.ui.activity.PublishVideoActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="mabeijianxi.camera.MediaRecorderActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.guolaiwan.ui.activity.CommentListActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.guolaiwan.ui.activity.GuideImageListActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.guolaiwan.ui.activity.RichPublicActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.guolaiwan.ui.activity.CameraActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.guolaiwan.ui.activity.AddTextActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.guolaiwan.ui.activity.PicTextDetailActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.guolaiwan.ui.activity.UpLoadActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.guolaiwan.ui.activity.MyVideoPicActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.guolaiwan.ui.activity.UserVideoPicActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.guolaiwan.ui.activity.PicSearchActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.guolaiwan.ui.activity.VideoPickerActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.guolaiwan.ui.activity.JiFenListActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.guolaiwan.ui.activity.ProfessionalLiveApplyActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.guolaiwan.ui.activity.ProfessionalLiveOrderActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.guolaiwan.ui.activity.ProfessionalLivePayActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.guolaiwan.ui.activity.ProfessionalLiveStartActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.guolaiwan.ui.activity.ProfessionalLiveCameraChoiceActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.guolaiwan.ui.activity.ProfessionalLiveLiveActivity"
+            android:screenOrientation="landscape"/>
+        <activity
+            android:name="com.guolaiwan.ui.activity.ProfessionalLiveDirectorActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.guolaiwan.ui.activity.ProfessionalLivePlayerActivity"
+            android:screenOrientation="landscape"/>
+        <activity
+            android:name="com.guolaiwan.ui.activity.ProfessionalLiveRecordVideoActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.guolaiwan.ui.activity.ProfessionalLiveDirectorTest"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.guolaiwan.ui.activity.PrefessionalLiveRecordVideoPlayActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="landscape"/>
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version"/>
+
+        <meta-data android:name="android.max_aspect" android:value="2.2" />
+    </application>
+
+</manifest>

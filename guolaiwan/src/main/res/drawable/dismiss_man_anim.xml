@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="true">
+
+    <item
+        android:drawable="@mipmap/man_26"
+        android:duration="200" />
+
+    <item
+        android:drawable="@mipmap/man_27"
+        android:duration="200" />
+
+    <item
+        android:drawable="@mipmap/man_28"
+        android:duration="200" />
+    <item
+        android:drawable="@mipmap/man_29"
+        android:duration="200" />
+
+    <item
+        android:drawable="@mipmap/man_30"
+        android:duration="200" />
+
+    <item
+        android:drawable="@mipmap/man_31"
+        android:duration="200" />
+
+    <item
+        android:drawable="@mipmap/man_33"
+        android:duration="200" />
+
+    <item
+        android:drawable="@mipmap/man_34"
+        android:duration="200" />
+
+
+</animation-list>

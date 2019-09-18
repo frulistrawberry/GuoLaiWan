@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_alert_dialog">
+
+    <TextView
+        android:id="@+id/title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="18dp"
+        android:textColor="#4D4D4D"
+        android:textSize="15sp"
+        android:text="语言选择"/>
+
+    <RadioGroup
+        android:id="@+id/redio_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        android:orientation="vertical"
+        android:layout_below="@id/title_tv">
+    </RadioGroup>
+
+    <View
+        android:id="@+id/v_dialog_divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/redio_group"
+        android:background="#F2F2F2"
+        android:layout_marginTop="18dp"/>
+
+    <LinearLayout
+        android:layout_below="@id/v_dialog_divider"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/cancel_tv"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="#4D4D4D"
+            android:textSize="15sp"
+            android:text="取消"/>
+
+        <View
+            android:id="@+id/v_dialog_vertical_divider"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#F2F2F2"/>
+
+        <TextView
+            android:id="@+id/confirm_tv"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="#627984"
+            android:textSize="15sp"
+            android:text="确定"/>
+
+    </LinearLayout>
+</RelativeLayout>

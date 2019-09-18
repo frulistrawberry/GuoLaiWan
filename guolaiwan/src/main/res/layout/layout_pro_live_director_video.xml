@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black">
+
+    <RelativeLayout
+        android:id="@+id/surface_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center">
+    </RelativeLayout>
+
+    <!--下UI布局-->
+    <RelativeLayout
+        android:id="@+id/layout_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:layout_alignParentBottom="true"
+        android:background="#99000000"
+        android:visibility="invisible">
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+
+            <ImageView
+                android:id="@+id/iv_voice"
+                android:layout_width="@dimen/dp_30"
+                android:layout_height="@dimen/dp_30"
+                android:layout_marginRight="@dimen/dp_5"
+                android:scaleType="fitXY"
+                android:src="@drawable/bt_pro_live_voice_close"
+                android:tag="close_voice"/>
+
+            <ImageView
+                android:id="@+id/iv_record"
+                android:visibility="gone"
+                android:layout_width="@dimen/dp_30"
+                android:layout_height="@dimen/dp_30"
+                android:layout_marginLeft="@dimen/dp_5"
+                android:layout_marginRight="@dimen/dp_5"
+                android:scaleType="fitXY"
+                android:src="@drawable/bt_pro_live_record_start"
+                android:tag="stop_record"/>
+
+            <ImageView
+                android:id="@+id/iv_goto_show"
+                android:layout_width="@dimen/dp_30"
+                android:layout_height="@dimen/dp_30"
+                android:layout_marginLeft="@dimen/dp_5"
+                android:scaleType="fitXY"
+                android:src="@drawable/bt_pro_live_goto_show"/>
+
+        </LinearLayout>
+
+        <!--导播暂时不要全屏-->
+        <!--<ImageView-->
+            <!--android:id="@+id/fullscreen"-->
+            <!--android:layout_width="@dimen/dp_25"-->
+            <!--android:layout_height="@dimen/dp_25"-->
+            <!--android:layout_marginRight="@dimen/dp_5"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:scaleType="fitXY"-->
+            <!--android:src="@drawable/video_enlarge" />-->
+    </RelativeLayout>
+
+    <!--上UI布局-->
+    <LinearLayout
+        android:id="@+id/layout_top"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:background="@drawable/video_title_bg">
+
+        <TextView
+            android:id="@+id/tv_live_name"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/dp_5"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_15"
+            android:text="直播名称"/>
+
+        <TextView
+            android:id="@+id/tv_signal_camera"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/yellow_trans_50"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_15"
+            android:visibility="gone"
+            android:text="信号机位"/>
+    </LinearLayout>
+
+    <moe.codeest.enviews.ENDownloadView
+        android:id="@+id/loading"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:visibility="invisible" />
+
+    <moe.codeest.enviews.ENPlayView
+        android:id="@+id/start"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center_vertical" />
+
+    <!--信号加载-->
+    <RelativeLayout
+        android:id="@+id/rl_load_signal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#000">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+
+            <ImageView
+                android:id="@+id/iv_load_or_add_video"
+                android:layout_width="@dimen/dp_80"
+                android:layout_height="@dimen/dp_80"
+                android:layout_gravity="center_horizontal"
+                android:src="@mipmap/signal_in"/>
+
+            <TextView
+                android:id="@+id/tv_load_or_add_video"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_15"
+                android:text="点击加载信号"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_camera_name"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:gravity="center_vertical"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_15"
+            android:text="机位名称"/>
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

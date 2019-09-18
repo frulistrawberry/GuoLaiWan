@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="15dp"
+    android:background="#f4f4f4">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="#888888">
+        <ImageView
+            android:id="@+id/iv_cover"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            />
+        <TextView
+            android:layout_marginTop="15dp"
+            android:paddingLeft="15dp"
+            android:id="@+id/tv_add_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="@color/white"
+            android:text="点击添加标题"
+            />
+
+        <TextView
+            android:id="@+id/add_music"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="@color/white"
+            android:layout_gravity="bottom|right"
+            android:padding="15dp"
+            android:text="添加背景音乐"/>
+
+        <ImageView
+            android:id="@+id/iv_add_cover"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/article_camera"
+            android:layout_gravity="center"/>
+
+    </FrameLayout>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <TextView
+        android:id="@+id/tv_publish"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:background="@drawable/shap_btn_green"
+        android:gravity="center"
+        android:textSize="14sp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:textColor="@color/white"
+        android:text="发布"
+        android:layout_below="@id/input_password"
+        android:layout_marginTop="15dp"/>
+
+</LinearLayout>

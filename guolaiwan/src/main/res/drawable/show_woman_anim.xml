@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="true">
+
+    <item
+        android:drawable="@mipmap/woman_1"
+        android:duration="200" />
+
+    <item
+        android:drawable="@mipmap/woman_2"
+        android:duration="200" />
+
+    <item
+        android:drawable="@mipmap/woman_3"
+        android:duration="200" />
+
+    <item
+        android:drawable="@mipmap/woman_4"
+        android:duration="200" />
+
+    <item
+        android:drawable="@mipmap/woman_5"
+        android:duration="200" />
+
+    <item
+        android:drawable="@mipmap/woman_6"
+        android:duration="200" />
+
+    <item
+        android:drawable="@mipmap/woman_7"
+        android:duration="200" />
+
+    <item
+        android:drawable="@mipmap/woman_8"
+        android:duration="200" />
+
+    <item
+        android:drawable="@mipmap/woman_9"
+        android:duration="200" />
+
+    <item
+        android:drawable="@mipmap/woman_10"
+        android:duration="200" />
+
+    <item
+        android:drawable="@mipmap/woman_11"
+        android:duration="200" />
+
+    <item
+        android:drawable="@mipmap/woman_12"
+        android:duration="200" />
+
+    <item
+        android:drawable="@mipmap/woman_13"
+        android:duration="200" />
+
+    <item
+        android:drawable="@mipmap/woman_14"
+        android:duration="200" />
+
+    <item
+        android:drawable="@mipmap/woman_15"
+        android:duration="200" />
+
+    <item
+        android:drawable="@mipmap/woman_16"
+        android:duration="200" />
+
+    <item
+        android:drawable="@mipmap/woman_17"
+        android:duration="200" />
+
+    <item
+        android:drawable="@mipmap/woman_18"
+        android:duration="200" />
+
+    <item
+        android:drawable="@mipmap/woman_18"
+        android:duration="200" />
+
+    <item
+        android:drawable="@mipmap/woman_19"
+        android:duration="200" />
+
+    <item
+        android:drawable="@mipmap/woman_20"
+        android:duration="200" />
+
+    <item
+        android:drawable="@mipmap/woman_21"
+        android:duration="200" />
+
+
+</animation-list>
